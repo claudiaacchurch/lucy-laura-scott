@@ -1,0 +1,36 @@
+.site-header {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+  }
+  
+  .header-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.7rem;
+  }
+  
+  .nav-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    font-weight: 400;
+  }
+  
+  .nav-block a {
+    text-decoration: none;
+    color: #000;
+    transition: opacity 0.2s;
+  }
+  
+  .nav-block a:hover {
+    opacity: 0.6;
+  }
+
+  .nav-block a.active {
+    font-weight: 700;
+  }
+  

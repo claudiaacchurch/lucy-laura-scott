@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    background-color: #e7e7e7;
+    color: #000;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: 2px;
+  }
+  
+  .home-main {
+    padding-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    max-width: 50%;
+    object-fit: contain;
+    filter: brightness(0.95);
+  }
+  
