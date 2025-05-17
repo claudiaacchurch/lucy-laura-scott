@@ -1,11 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import '../styles/Header.css';
 
 const Header = () => {
   return (
     <header className="site-header">
-      <div className="header-name">LucyLauraScott:</div>
+      <div className="header-name">
+    <Link to="/">LucyLauraScott:</Link>
+    </div>
       <nav className="nav-block">
         <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>About</NavLink>|
         <NavLink to="/works" className={({ isActive }) => isActive ? 'active' : ''}>Works</NavLink>|

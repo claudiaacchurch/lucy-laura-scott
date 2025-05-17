@@ -11,26 +11,31 @@
     font-weight: 500;
     margin-bottom: 0.7rem;
   }
+
+  .header-name a {
+    text-decoration: none;
+    color: inherit;
+  }
   
   .nav-block {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     gap: 0.5rem;
-    font-weight: 400;
+    font-weight: 200;
   }
   
   .nav-block a {
     text-decoration: none;
-    color: #000;
+    color: black;
     transition: opacity 0.2s;
   }
   
-  .nav-block a:hover {
-    opacity: 0.6;
+  .nav-block a:hover, .header-name a:hover {
+    opacity: 0.5;
   }
 
   .nav-block a.active {
-    font-weight: 700;
+    opacity: 0.5;
   }
   
