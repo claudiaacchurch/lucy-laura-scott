@@ -1,0 +1,32 @@
+.site-footer {
+    margin-top: 4rem;
+    padding: 2rem 20vw;
+    text-align: left;
+    font-size: 0.85rem;
+    font-family: 'Inter', sans-serif;
+    color: #000;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .site-footer p {
+    font-weight: 200;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #000;
+    transition: opacity 0.2s;
+  }
+  
+  .footer-links a:hover {
+    opacity: 0.6;
+  }
+  

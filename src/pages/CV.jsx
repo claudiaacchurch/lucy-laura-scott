@@ -8,12 +8,6 @@ const CV = () => {
     <Header />
       <main>
         <section>
-          <h2>Solo Exhibitions</h2>
-          <ul>
-            <li><span className="cv-date">2018</span>"Sensibility", Culworth Forge, Oxfordshire</li>
-          </ul>
-        </section>
-        <section>
           <h2>Group Exhibitions</h2>
           <ul>
             <li><span className="cv-date">2025</span> Artists open houses, Brighton </li>
@@ -27,6 +21,12 @@ const CV = () => {
             <li><span className="cv-date">2022</span> Concrete, The fishing Quarter Gallery, Brighton</li>
             <li><span className="cv-date">2022</span> Materialised Intention, Presuming Ed, Brighton</li>
             <li><span className="cv-date">2022</span> Brighton Summer Show, University of Brighton, Brighton</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Solo Exhibitions</h2>
+          <ul>
+            <li><span className="cv-date">2018</span>"Sensibility", Culworth Forge, Oxfordshire</li>
           </ul>
         </section>
         <section>

@@ -1,0 +1,58 @@
+.works-page {
+    padding: 8rem 5vw 4rem;
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .works-page h1 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+  
+  .works-grid {
+    column-count: 2;
+    column-gap: 1.5rem;
+  }
+  
+  @media (min-width: 960px) {
+    .works-grid {
+      column-count: 4;
+    }
+  }
+  
+  .work-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+  
+  .work-image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  
+  
+  .work-image:hover {
+    transform: scale(1.03);
+  }
+  
+  .my-masonry-grid {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .my-masonry-grid_column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .work-image {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
