@@ -1,13 +1,14 @@
 .site-header {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 10;
-  }
-  
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  z-index: 100;
+  padding: 2rem;
+}
+
   .header-name {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: var(--font-title);
     font-weight: 500;
     margin-bottom: 0.7rem;
   }
@@ -20,9 +21,9 @@
   .nav-block {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     gap: 0.5rem;
     font-weight: 200;
+    font-size: var(--font-body);
   }
   
   .nav-block a {

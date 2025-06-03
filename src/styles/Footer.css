@@ -1,17 +1,17 @@
 .site-footer {
-    margin-top: 4rem;
-    padding: 2rem 20vw;
-    text-align: left;
-    font-size: 0.85rem;
-    font-family: 'Inter', sans-serif;
-    color: #000;
-    border-top: 1px solid #ddd;
+    height: 60px;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
-  }
+    font-family: "Inter", sans-serif;
+    font-size: var(--font-small);
+  }  
 
   .site-footer p {
     font-weight: 200;
+    font-family: "Inter", sans-serif;
   }
   
   .footer-links {
@@ -28,5 +28,10 @@
   
   .footer-links a:hover {
     opacity: 0.6;
+  }
+
+  .site-footer svg {
+    width: 20px;
+    height: 20px;
   }
   

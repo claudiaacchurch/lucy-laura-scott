@@ -5,7 +5,7 @@
   }
   
   .works-page h1 {
-    font-size: 1.2rem;
+    font-size: var(--font-subtitle);
     font-weight: 500;
     margin-bottom: 2rem;
     text-transform: uppercase;
@@ -15,6 +15,26 @@
     column-count: 2;
     column-gap: 1.5rem;
   }
+
+  .filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filter-buttons button {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-size: var(--font-body);
+  }
+  
+  .filter-buttons .active {
+    background: #000;
+    color: #fff;
+  }
+  
   
   @media (min-width: 960px) {
     .works-grid {

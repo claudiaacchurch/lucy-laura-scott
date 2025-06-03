@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from "../components/Header";
 import '../styles/CV.css';
+import Footer from '../components/Footer';
 
 const CV = () => {
   return (
     <>
     <Header />
-      <main>
+      <main className='cv-page'>
         <section>
           <h2>Group Exhibitions</h2>
           <ul>
@@ -43,6 +44,7 @@ const CV = () => {
           </ul>
         </section>
       </main>
+      <Footer />
     </>
   );
 };

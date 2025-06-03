@@ -6,6 +6,7 @@ import About from './pages/About';
 import Works from './pages/Works';
 import CV from './pages/CV';
 import Contact from './pages/Contact';
+import './styles/Generic.css';
 
 function App() {
   return (

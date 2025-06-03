@@ -1,21 +1,18 @@
 import React from "react";
+import Layout from "./Layout";
 import "../styles/Home.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <>
-      <Header />
-      <main className="home-main">
+    <Layout>
+      <div className="home-hero-wrapper">
         <img
           src="/header-img.jpg"
           alt="Featured Artwork"
           className="hero-image"
         />
-      </main>
-      <Footer />
-    </>
+      </div>
+    </Layout>
   );
 };
 
