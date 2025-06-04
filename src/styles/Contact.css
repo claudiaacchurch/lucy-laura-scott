@@ -3,7 +3,7 @@
     max-height: calc(100vh - 180px - 4rem);
     font-size: var(--font-body);
     padding: 2rem;
-    background-color: #fafafa;
+    background-color: white;
   }
   
   .contact-intro {
