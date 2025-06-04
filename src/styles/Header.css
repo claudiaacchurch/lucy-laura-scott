@@ -30,6 +30,7 @@
     text-decoration: none;
     color: black;
     transition: opacity 0.2s;
+    font-family: 'Inter', sans-serif;
   }
   
   .nav-block a:hover, .header-name a:hover {

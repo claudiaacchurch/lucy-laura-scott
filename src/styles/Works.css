@@ -23,18 +23,24 @@
   }
   
   .filter-buttons button {
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 0.5rem;
     background: none;
-    border: 1px solid #000;
+    border: none;
     cursor: pointer;
     font-size: var(--font-body);
+    font-family: 'Inter', sans-serif;
+    border-radius: 12px;
+    font-weight: 200;
   }
   
   .filter-buttons .active {
-    background: #000;
+    background:#494747;
     color: #fff;
   }
-  
+
+  .filter-buttons button:hover {
+    opacity: 0.5;
+  }
   
   @media (min-width: 960px) {
     .works-grid {
