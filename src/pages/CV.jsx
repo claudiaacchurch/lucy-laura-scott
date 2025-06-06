@@ -27,7 +27,7 @@ const CV = () => {
         <section>
           <h2>Solo Exhibitions</h2>
           <ul>
-            <li><span className="cv-date">2018</span>"Sensibility", Culworth Forge, Oxfordshire</li>
+            <li><span className="cv-date">2018</span> "Sensibility", Culworth Forge, Oxfordshire</li>
           </ul>
         </section>
         <section>

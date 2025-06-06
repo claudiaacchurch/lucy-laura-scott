@@ -1,8 +1,14 @@
-:root {
+html {
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+  
+  :root {
     --font-title: 2rem;
     --font-subtitle: 1.2rem;
-    --font-body: 1.1rem;
+    --font-body: 1rem;
     --font-small: 0.95rem;
      background-color: #fafafa;
+      
   }
+
   

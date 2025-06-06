@@ -92,6 +92,7 @@
     bottom: 0;
     background: rgba(0, 0, 0, 0.5); /* dark overlay */
     color: white;
+    font-family: 'Inter', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,7 +101,6 @@
     transition-delay: 0s;
     text-align: center;
     padding: 0.5rem;
-
   }
   
   .image-container:hover .overlay {
