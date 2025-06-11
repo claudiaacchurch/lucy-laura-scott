@@ -11,6 +11,8 @@ function decodeHTML(html) {
 const Works = () => {
   const [selectedYear, setSelectedYear] = useState("All");
   const [artworks, setArtworks] = useState([]);
+  const [loadedCount, setLoadedCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch(
@@ -41,7 +43,6 @@ const Works = () => {
       });
   }, []);
   
-
   const years = ["All", 2022, 2023, 2024, 2025];
 
   const filteredWorks =
@@ -49,6 +50,12 @@ const Works = () => {
       ? artworks
       : artworks.filter((work) => work.year === selectedYear);
 
+      useEffect(() => {
+        if (loadedCount === filteredWorks.length && filteredWorks.length > 0) {
+          setIsLoading(false);
+        }
+      }, [loadedCount, filteredWorks]);
+      
   return (
     <Layout>
       <div className="filter-buttons">
@@ -62,12 +69,13 @@ const Works = () => {
           </button>
         ))}
       </div>
+      {isLoading && <div className="spinner-wrapper"><div className="spinner" /></div>}
 
       <div className="works-grid">
   {filteredWorks.map((work, index) => (
     <div className="work-item" key={index}>
       <div className="image-container">
-        <img src={work.image} alt={work.title} className="work-image" />
+        <img src={work.image} alt={work.title} className="work-image"   onLoad={() => setLoadedCount((count) => count + 1)} loading="lazy"/>
         <div className="overlay">
           <span className="work-title">{decodeHTML(work.title)}</span>
         </div>
