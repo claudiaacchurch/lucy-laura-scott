@@ -45,7 +45,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 4rem;
-    font-weight: 200;
+	font-weight: 200;
 }
 
 .artwork-title {
@@ -53,5 +53,11 @@
 	font-weight: 200;
 	margin-bottom: 2rem;
 	margin-top: 0;
-    font-family: "Playfair Display", serif;
+	font-family: "Playfair Display", serif;
+}
+
+@media (max-width: 768px) {
+	.artwork-details {
+		grid-template-columns: 1fr;
+	}
 }
