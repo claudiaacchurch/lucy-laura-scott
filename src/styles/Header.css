@@ -1,43 +1,43 @@
 .site-header {
-  height: 60px;
-  background: #fff;
-  border-bottom: 1px solid #ccc;
-  z-index: 100;
-  padding: 2rem;
+	height: 60px;
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	z-index: 100;
+	padding: 2rem;
 }
 
-  .header-name {
-    font-family: 'Playfair Display', serif;
-    font-size: var(--font-title);
-    font-weight: 500;
-    margin-bottom: 0.7rem;
-  }
+.header-name {
+	font-family: "Playfair Display", serif;
+	font-size: var(--font-title);
+	font-weight: 500;
+	margin-bottom: 0.7rem;
+}
 
-  .header-name a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .nav-block {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    font-weight: 200;
-    font-size: var(--font-body);
-  }
-  
-  .nav-block a {
-    text-decoration: none;
-    color: black;
-    transition: opacity 0.2s;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .nav-block a:hover, .header-name a:hover {
-    opacity: 0.5;
-  }
+.header-name a {
+	text-decoration: none;
+	color: inherit;
+}
 
-  .nav-block a.active {
-    opacity: 0.5;
-  }
-  
+.nav-block {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	font-weight: 200;
+	font-size: var(--font-body);
+}
+
+.nav-block a {
+	text-decoration: none;
+	color: black;
+	transition: opacity 0.2s;
+	font-family: "Inter", sans-serif;
+}
+
+.nav-block a:hover,
+.header-name a:hover {
+	opacity: 0.5;
+}
+
+.nav-block a.active {
+	opacity: 0.5;
+}
