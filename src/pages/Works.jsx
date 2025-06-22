@@ -33,12 +33,11 @@ const Works = () => {
 			.then((data) => {
 				const formatted = data.map((post) => {
 					const content = post.content.rendered;
-
 					const imgMatch = content.match(/<img[^>]+src="([^">]+)"/);
 					const image = imgMatch ? imgMatch[1] : null;
 
-					const tagList = post._embedded?.["wp:term"]?.[0] || [];
-					const yearTag = tagList.find((tag) => /^\d{4}$/.test(tag.name));
+					const allTags = post._embedded?.["wp:term"]?.flat() || [];
+					const yearTag = allTags.find((tag) => /^\d{4}$/.test(tag.name));
 					const year = yearTag ? parseInt(yearTag.name) : null;
 
 					const title = decodeHTML(post.title.rendered);
@@ -93,6 +92,7 @@ const Works = () => {
 			<div className="works-grid">
 				{filteredWorks.map((work, index) => (
 					<Link
+						key={index}
 						to={`/works/${work.slug}`}
 						state={{ artwork: work, content: work.content }}
 					>
