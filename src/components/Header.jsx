@@ -10,17 +10,17 @@ const Header = () => {
 			</div>
 			<nav className="nav-block">
 				<NavLink
-					to="/about"
-					className={({ isActive }) => (isActive ? "active" : "")}
-				>
-					About
-				</NavLink>
-				|
-				<NavLink
 					to="/works"
 					className={({ isActive }) => (isActive ? "active" : "")}
 				>
 					Works
+				</NavLink>
+								|
+				<NavLink
+					to="/about"
+					className={({ isActive }) => (isActive ? "active" : "")}
+				>
+					About
 				</NavLink>
 				|
 				<NavLink

@@ -29,8 +29,9 @@ h2 {
 }
 
 ul li {
-	display: flex;
-	align-items: flex-start;
+	display: grid;
+	grid-template-columns: 4.5ch 1fr;
+	align-items: baseline;
 	gap: 1rem;
 	line-height: 2;
 	max-width: 90%;
