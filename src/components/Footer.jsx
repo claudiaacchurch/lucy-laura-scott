@@ -15,10 +15,10 @@ const Footer = () => {
 				</a>
 				<span>·</span>
 				<a
-					href="https://instagram.com/lucylaurascott"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
+								href="https://instagram.com/alottyscotty"
+								target="_blank"
+								rel="noreferrer"
+							>
 					<Instagram size={16} style={{ marginRight: "0.5rem" }} />
 				</a>
 			</div>
