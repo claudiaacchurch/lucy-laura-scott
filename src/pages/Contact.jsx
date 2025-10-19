@@ -8,8 +8,8 @@ const Contact = () => {
 		<Layout>
 			<main className="contact-page">
 				<p className="contact-intro">
-					For inquiries, collaborations, or commissions, feel free to reach out
-					via email, phone or Instagram.
+					For enquiries on available works and collaborations,
+					please reach out via email or Instagram.
 				</p>
 
 				<div className="contact-columns">
@@ -26,10 +26,6 @@ const Contact = () => {
 							<a href="mailto:lucylaurascott@gmail.com">
 								lucylaurascott@gmail.com
 							</a>
-						</p>
-						<p>
-							<Phone size={16} style={{ marginRight: "0.5rem" }} />
-							<a href="tel:+447123456789">+44 7123 456 789</a>
 						</p>
 						<p>
 							<Instagram size={16} style={{ marginRight: "0.5rem" }} />

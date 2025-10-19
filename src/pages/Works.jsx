@@ -56,7 +56,7 @@ const Works = () => {
 			});
 	}, []);
 
-	const years = ["All", 2022, 2023, 2024, 2025];
+	const years = ["All", 2024, 2025];
 
 	const filteredWorks =
 		selectedYear === "All"

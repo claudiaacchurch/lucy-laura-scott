@@ -7,7 +7,6 @@
 }
 
 .header-name {
-	font-family: "Playfair Display", serif;
 	font-size: var(--font-title);
 	font-weight: 500;
 	margin-bottom: 0.7rem;
@@ -28,9 +27,9 @@
 
 .nav-block a {
 	text-decoration: none;
-	color: black;
 	transition: opacity 0.2s;
 	font-family: "Inter", sans-serif;
+	color: #6c6565;
 }
 
 .nav-block a:hover,
