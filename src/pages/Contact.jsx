@@ -4,6 +4,42 @@ import Layout from "../pages/Layout";
 import { Mail, Phone, Instagram } from "lucide-react";
 
 const Contact = () => {
+	const instagramWebUrl = "https://instagram.com/alottyscotty";
+
+	const handleInstagramClick = (event) => {
+		if (
+			typeof window === "undefined" ||
+			typeof navigator === "undefined" ||
+			typeof document === "undefined"
+		) {
+			return;
+		}
+
+		const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+		if (!isMobile) {
+			return;
+		}
+
+		event.preventDefault();
+
+		const instagramAppUrl = "instagram://user?username=alottyscotty";
+
+		const fallbackTimeout = setTimeout(() => {
+			window.location.href = instagramWebUrl;
+		}, 700);
+
+		const handleVisibilityChange = () => {
+			if (document.hidden) {
+				clearTimeout(fallbackTimeout);
+				document.removeEventListener("visibilitychange", handleVisibilityChange);
+			}
+		};
+
+		document.addEventListener("visibilitychange", handleVisibilityChange);
+		window.location.href = instagramAppUrl;
+	};
+
 	return (
 		<Layout>
 			<main className="contact-page">
@@ -30,9 +66,10 @@ const Contact = () => {
 						<p>
 							<Instagram size={16} style={{ marginRight: "0.5rem" }} />
 							<a
-								href="https://instagram.com/alottyscotty"
+								href={instagramWebUrl}
 								target="_blank"
 								rel="noreferrer"
+								onClick={handleInstagramClick}
 							>
 								@alottyscotty
 							</a>
