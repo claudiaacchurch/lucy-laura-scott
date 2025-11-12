@@ -27,7 +27,7 @@ const Works = () => {
 
 	useEffect(() => {
 		fetch(
-			"https://public-api.wordpress.com/wp/v2/sites/claudiaamch6.wordpress.com/posts?tags=2817&_embed"
+			"https://public-api.wordpress.com/wp/v2/sites/claudiaamch6.wordpress.com/posts?tags=2817&_embed&per_page=100"
 		)
 			.then((res) => res.json())
 			.then((data) => {
