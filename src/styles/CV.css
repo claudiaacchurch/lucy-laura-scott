@@ -45,9 +45,10 @@
 
 .cv-page ul li {
 	align-items: baseline;
-	line-height: 2;
 	max-width: 90%;
 	box-sizing: border-box;
+	line-height: 1.5;
+    margin-bottom: 1em;
 }
 
 .cv-date {
