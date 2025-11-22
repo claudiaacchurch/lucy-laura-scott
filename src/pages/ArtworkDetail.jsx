@@ -14,8 +14,10 @@ const ArtworkDetails = () => {
 	useEffect(() => {
 		if (!slug) return;
 
+		const normalizedSlug = slug.replace(/,/g, "");
+
 		fetch(
-			`https://public-api.wordpress.com/wp/v2/sites/claudiaamch6.wordpress.com/tags?slug=${slug}`
+			`https://public-api.wordpress.com/wp/v2/sites/claudiaamch6.wordpress.com/tags?slug=${normalizedSlug}`
 		)
 			.then((res) => res.json())
 			.then((data) => {
