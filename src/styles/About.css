@@ -50,6 +50,45 @@
 .about-text {
 	line-height: 2;
 	font-weight: 200;
+	font-size: var(--font-small);
+}
+
+.about-text p {
+	margin: 0;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+}
+
+.about-text p:last-child {
+	margin-bottom: 0;
+}
+
+.about-text a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.about-text strong,
+.about-text b {
+	font-weight: 400;
+}
+
+.about-text em,
+.about-text i {
+	font-style: italic;
+}
+
+.about-text ul,
+.about-text ol {
+	margin: 0 0 1.5rem 1.25rem;
+	padding: 0;
+	line-height: inherit;
+	font-weight: inherit;
+}
+
+.about-text li {
+	margin-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {

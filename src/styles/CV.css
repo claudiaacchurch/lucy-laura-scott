@@ -23,7 +23,7 @@
 	font-size: var(--font-subtitle);
 	letter-spacing: 1px;
 	padding: 1.5rem;
-	padding-left: 0;
+	padding-left: 1rem;
 	margin: 0;
 }
 
