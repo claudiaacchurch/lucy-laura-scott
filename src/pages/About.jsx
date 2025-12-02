@@ -42,7 +42,6 @@ const About = () => {
 				</div>
 
 				<div className="about-information">
-					<h1 className="about-title">Artist's Statement</h1>
 					{aboutContent ? (
 						<div
 							className="about-text"

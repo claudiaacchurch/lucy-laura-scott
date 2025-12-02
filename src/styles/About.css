@@ -36,11 +36,6 @@
 	opacity: 1;
 }
 
-.about-title {
-	font-size: var(--font-title);
-	font-weight: 400;
-}
-
 .about-information {
 	flex: 1;
 	max-width: 40%;
