@@ -12,6 +12,10 @@ const ArtworkDetails = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [slug]);
+
+	useEffect(() => {
 		if (!slug) return;
 
 		const normalizedSlug = slug.replace(/,/g, "");
