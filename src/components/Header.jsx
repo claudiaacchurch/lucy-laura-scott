@@ -6,7 +6,14 @@ const Header = () => {
 	return (
 		<header className="site-header">
 			<div className="header-name">
-				<Link to="/">LucyLauraScott</Link>
+				<Link to="/">
+					<img
+						src="/lucylaurascott.png"
+						alt="LucyLauraScott"
+						className="header-img"
+						loading="lazy"
+					/>
+				</Link>
 			</div>
 			<nav className="nav-block">
 				<NavLink

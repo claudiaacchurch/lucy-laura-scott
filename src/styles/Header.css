@@ -12,6 +12,18 @@
 	margin-bottom: 0.7rem;
 }
 
+.header-img {
+	display: block;
+	width: 204px;
+	height: auto;
+}
+
+@media (min-width: 1185px) {
+	.header-img {
+		width: 17vw;
+	}
+}
+
 .header-name a {
 	text-decoration: none;
 	color: inherit;
@@ -40,3 +52,4 @@
 .nav-block a.active {
 	opacity: 0.5;
 }
+
