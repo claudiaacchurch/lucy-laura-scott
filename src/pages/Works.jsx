@@ -56,7 +56,12 @@ const Works = () => {
 			});
 	}, []);
 
-	const years = ["All", 2024, 2025];
+	// Dynamically extract unique years from artworks
+	const years = React.useMemo(() => {
+		const uniqueYears = [...new Set(artworks.map(work => work.year).filter(year => year !== null))];
+		const sortedYears = uniqueYears.sort((a, b) => a - b); // Sort ascending
+		return ["All", ...sortedYears];
+	}, [artworks]);
 
 	const filteredWorks =
 		selectedYear === "All"
