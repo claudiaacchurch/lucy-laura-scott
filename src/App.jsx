@@ -4,6 +4,7 @@ import Works from "./pages/Works";
 import ArtworkDetail from "./pages/ArtworkDetail";
 import CV from "./pages/CV";
 import Contact from "./pages/Contact";
+import SoundCloudPlayer from "./components/SoundCloudPlayer";
 import "./styles/Generic.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 				<Route path="/cv" element={<CV />} />
 				<Route path="/contact" element={<Contact />} />
 			</Routes>
+			<SoundCloudPlayer />
 		</>
 	);
 }
