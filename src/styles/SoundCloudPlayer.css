@@ -1,0 +1,33 @@
+.soundcloud-player-container {
+	position: fixed;
+	right: 20px;
+	transition: bottom 0.2s ease;
+	z-index: 1000;
+}
+
+.play-pause-button {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1px solid #d0d0d0;
+	background: #fafafa;
+	color: #505050;
+	font-size: 12px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s ease;
+	opacity: 0.7;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.play-pause-button:hover {
+	opacity: 1;
+	border-color: #505050;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.play-pause-button:active {
+	transform: scale(0.95);
+}
