@@ -107,8 +107,6 @@ const CV = () => {
 		};
 	}, [isLoading, sections]);
 
-	let revealStep = 0;
-
 	return (
 		<Layout>
 			<main className={`cv-page ${isRevealed ? "is-ready" : ""}`}>
@@ -118,26 +116,16 @@ const CV = () => {
 					<p className="cv-error">{error}</p>
 				) : (
 					<div className="cv-content">
-						{sections.map((section) => (
+						{sections.map((section, sectionIndex) => (
 							<section
 								className="cv-section"
 								key={section.title}
+								style={{ transitionDelay: `${sectionIndex * 90}ms` }}
 							>
-								<h1
-									style={{
-										transitionDelay: `${Math.min(revealStep++, 18) * 70}ms`,
-									}}
-								>
-									{section.title}
-								</h1>
+								<h1>{section.title}</h1>
 								<ul>
 									{section.entries.map((entry, index) => (
-										<li
-											key={`${entry.date}-${index}`}
-											style={{
-												transitionDelay: `${Math.min(revealStep++, 18) * 70}ms`,
-											}}
-										>
+										<li key={`${entry.date}-${index}`}>
 											<span className="cv-date">{entry.date}</span>
 											<span
 												className="cv-entry"
