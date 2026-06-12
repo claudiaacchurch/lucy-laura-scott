@@ -68,7 +68,6 @@ const Contact = () => {
 		<Layout>
 			<main className="contact-page">
 				<section className="contact-information">
-					<p className="contact-kicker">Contact</p>
 					<p className="contact-intro">
 						For enquiries about available works, exhibitions, commissions,
 						or collaborations, please get in touch.

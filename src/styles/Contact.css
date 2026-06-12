@@ -14,15 +14,6 @@
 	max-width: 460px;
 }
 
-.contact-kicker {
-	margin: 0 0 1.2rem;
-	color: #847e79;
-	font-size: var(--font-meta);
-	font-weight: 400;
-	letter-spacing: 0.16em;
-	text-transform: uppercase;
-}
-
 .contact-intro {
 	max-width: 43ch;
 	margin: 0;
@@ -192,7 +183,7 @@
 	outline-offset: 4px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
 	.contact-page {
 		grid-template-columns: minmax(0, 1fr);
 		gap: 3rem;

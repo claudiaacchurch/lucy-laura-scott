@@ -91,7 +91,7 @@
 	transition-delay: var(--reveal-delay);
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1025px) {
 	.works-grid {
 		column-count: 4;
 	}

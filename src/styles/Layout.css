@@ -33,7 +33,7 @@ body {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	.layout-main {
 		padding: 1rem;
 	}

@@ -149,7 +149,7 @@
 	}
 }
 
-@media (max-width: 680px) {
+@media (max-width: 1024px) {
 	.cv-page {
 		padding: 1.5rem 0.25rem 3rem;
 	}

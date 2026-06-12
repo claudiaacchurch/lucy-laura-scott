@@ -179,7 +179,7 @@
 	display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	.artwork-details {
 		grid-template-columns: minmax(0, 1fr);
 		align-items: start;
