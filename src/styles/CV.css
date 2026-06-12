@@ -40,7 +40,7 @@
 	margin: 0;
 	font-size: var(--font-subtitle);
 	font-weight: 300;
-	line-height: 1.35;
+	line-height: var(--line-heading);
 	letter-spacing: 0.025em;
 }
 
@@ -59,12 +59,12 @@
 	gap: 1rem;
 	font-size: var(--font-small);
 	font-weight: 200;
-	line-height: 1.55;
+	line-height: var(--line-body);
 }
 
 .cv-date {
 	color: #77716d;
-	font-size: 0.82rem;
+	font-size: var(--font-label);
 	font-style: normal;
 	font-variant-numeric: tabular-nums;
 	letter-spacing: 0.025em;

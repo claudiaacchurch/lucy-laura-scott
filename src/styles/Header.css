@@ -42,7 +42,7 @@
 	justify-content: flex-end;
 	gap: clamp(1.25rem, 3vw, 2.75rem);
 	font-family: "Inter", sans-serif;
-	font-size: 0.82rem;
+	font-size: var(--font-label);
 	font-weight: 300;
 	letter-spacing: 0.025em;
 }
@@ -108,13 +108,12 @@
 		justify-content: flex-start;
 		gap: 1.25rem;
 		margin-left: 5px;
-		font-size: 0.76rem;
+		font-size: var(--font-label);
 	}
 }
 
 @media (max-width: 380px) {
 	.nav-block {
 		gap: 0.9rem;
-		font-size: 0.7rem;
 	}
 }

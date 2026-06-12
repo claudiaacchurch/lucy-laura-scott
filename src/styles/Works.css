@@ -37,7 +37,7 @@
 	border: none;
 	cursor: pointer;
 	color: #77716d;
-	font-size: 0.78rem;
+	font-size: var(--font-label);
 	font-family: "Inter", sans-serif;
 	letter-spacing: 0.025em;
 	border-radius: 999px;
@@ -192,9 +192,9 @@
 	max-width: 18ch;
 	margin: 0;
 	font-family: "Inter", sans-serif;
-	font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+	font-size: var(--font-card-title);
 	font-weight: 200;
-	line-height: 1.12;
+	line-height: var(--line-heading);
 	letter-spacing: -0.02em;
 	text-wrap: balance;
 	text-shadow: 0 1px 14px rgba(0, 0, 0, 0.25);
@@ -202,8 +202,8 @@
 
 .work-year {
 	margin: 0.55rem 0 0;
-	font-family: "DM Sans", sans-serif;
-	font-size: 0.68rem;
+	font-family: "Inter", sans-serif;
+	font-size: var(--font-meta);
 	font-weight: 400;
 	letter-spacing: 0.14em;
 	opacity: 0.78;

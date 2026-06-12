@@ -12,7 +12,7 @@
 	border: 1px solid #d0d0d0;
 	background: #fafafa;
 	color: #505050;
-	font-size: 12px;
+	font-size: var(--font-meta);
 	cursor: pointer;
 	display: flex;
 	align-items: center;

@@ -1,5 +1,5 @@
 html {
-	font-size: clamp(14px, 1.2vw, 18px);
+	font-size: clamp(15px, 1.1vw, 18px);
 	overflow-x: hidden;
 	overflow-y: scroll;
 	font-family: "Inter", sans-serif;
@@ -7,10 +7,16 @@ html {
 }
 
 :root {
-	--font-title: 2rem;
-	--font-subtitle: 1.2rem;
+	--font-display: clamp(1.75rem, 3vw, 2.6rem);
+	--font-title: clamp(1.4rem, 2vw, 1.8rem);
+	--font-card-title: clamp(1.05rem, 1.5vw, 1.35rem);
+	--font-subtitle: 1.15rem;
 	--font-body: 1rem;
-	--font-small: 0.95rem;
+	--font-small: 0.9rem;
+	--font-label: 0.8rem;
+	--font-meta: 0.75rem;
+	--line-heading: 1.15;
+	--line-body: 1.7;
 	background-color: #fafafa;
 	color: #505050;
 }

@@ -101,51 +101,55 @@ const Contact = () => {
 					</div>
 				</section>
 
-				<form className="contact-form" onSubmit={handleSubmit}>
-					<div className="contact-field-row">
+				<section className="contact-form-section">
+					<p className="contact-form-title">Send an enquiry</p>
+
+					<form className="contact-form" onSubmit={handleSubmit}>
+						<div className="contact-field-row">
+							<label>
+								<span>Name</span>
+								<input
+									type="text"
+									name="name"
+									autoComplete="name"
+									required
+								/>
+							</label>
+							<label>
+								<span>Email</span>
+								<input
+									type="email"
+									name="email"
+									autoComplete="email"
+									required
+								/>
+							</label>
+						</div>
+
 						<label>
-							<span>Name</span>
+							<span>Subject</span>
 							<input
 								type="text"
-								name="name"
-								autoComplete="name"
-								required
+								name="subject"
 							/>
 						</label>
+
 						<label>
-							<span>Email</span>
-							<input
-								type="email"
-								name="email"
-								autoComplete="email"
+							<span>Message</span>
+							<textarea
+								name="message"
+								rows="6"
+								placeholder="Tell me a little about your enquiry..."
 								required
 							/>
 						</label>
-					</div>
 
-					<label>
-						<span>Subject</span>
-						<input
-							type="text"
-							name="subject"
-						/>
-					</label>
-
-					<label>
-						<span>Message</span>
-						<textarea
-							name="message"
-							rows="6"
-							placeholder="Tell me a little about your enquiry..."
-							required
-						/>
-					</label>
-
-					<button type="submit">
-						<span>Send email</span>
-						<ArrowUpRight size={17} aria-hidden="true" />
-					</button>
-				</form>
+						<button type="submit">
+							<span>Send email</span>
+							<ArrowUpRight size={17} aria-hidden="true" />
+						</button>
+					</form>
+				</section>
 			</main>
 		</Layout>
 	);
