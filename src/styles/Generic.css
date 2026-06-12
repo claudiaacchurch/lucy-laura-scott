@@ -3,6 +3,7 @@ html {
 	overflow-x: hidden;
 	overflow-y: scroll;
 	font-family: "Inter", sans-serif;
+	scroll-behavior: smooth;
 }
 
 :root {
@@ -17,4 +18,29 @@ html {
 a {
 	color: #505050;
 	text-decoration: none;
+}
+
+button,
+a {
+	-webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+	background: #505050;
+	color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
 }

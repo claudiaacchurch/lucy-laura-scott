@@ -5,45 +5,45 @@ import "../styles/Header.css";
 const Header = () => {
 	return (
 		<header className="site-header">
-			<div className="header-name">
+			<div className="header-inner">
 				<Link to="/">
 					<img
 						src="/lucylaurascott.png"
 						alt="LucyLauraScott"
 						className="header-img"
-						loading="lazy"
+						loading="eager"
+						fetchPriority="high"
+						decoding="async"
 					/>
 				</Link>
+
+				<nav className="nav-block" aria-label="Primary navigation">
+					<NavLink
+						to="/works"
+						className={({ isActive }) => (isActive ? "active" : "")}
+					>
+						Works
+					</NavLink>
+					<NavLink
+						to="/about"
+						className={({ isActive }) => (isActive ? "active" : "")}
+					>
+						About
+					</NavLink>
+					<NavLink
+						to="/cv"
+						className={({ isActive }) => (isActive ? "active" : "")}
+					>
+						CV
+					</NavLink>
+					<NavLink
+						to="/contact"
+						className={({ isActive }) => (isActive ? "active" : "")}
+					>
+						Contact
+					</NavLink>
+				</nav>
 			</div>
-			<nav className="nav-block">
-				<NavLink
-					to="/works"
-					className={({ isActive }) => (isActive ? "active" : "")}
-				>
-					Works
-				</NavLink>
-								|
-				<NavLink
-					to="/about"
-					className={({ isActive }) => (isActive ? "active" : "")}
-				>
-					About
-				</NavLink>
-				|
-				<NavLink
-					to="/cv"
-					className={({ isActive }) => (isActive ? "active" : "")}
-				>
-					CV
-				</NavLink>
-				|
-				<NavLink
-					to="/contact"
-					className={({ isActive }) => (isActive ? "active" : "")}
-				>
-					Contact
-				</NavLink>
-			</nav>
 		</header>
 	);
 };

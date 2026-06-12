@@ -1,10 +1,34 @@
 import React from "react";
 import "../styles/Contact.css";
 import Layout from "../pages/Layout";
-import { Mail, Phone, Instagram } from "lucide-react";
+import { ArrowUpRight, Instagram, Mail } from "lucide-react";
 
 const Contact = () => {
 	const instagramWebUrl = "https://instagram.com/alottyscotty";
+	const emailAddress = "lucylaurascott@gmail.com";
+
+	const handleSubmit = (event) => {
+		event.preventDefault();
+
+		const formData = new FormData(event.currentTarget);
+		const name = formData.get("name")?.toString().trim();
+		const email = formData.get("email")?.toString().trim();
+		const subject =
+			formData.get("subject")?.toString().trim() || "Artwork enquiry";
+		const message = formData.get("message")?.toString().trim();
+		const body = [
+			message,
+			"",
+			name ? `From: ${name}` : "",
+			email ? `Reply to: ${email}` : "",
+		]
+			.filter(Boolean)
+			.join("\n");
+
+		window.location.href = `mailto:${emailAddress}?subject=${encodeURIComponent(
+			subject,
+		)}&body=${encodeURIComponent(body)}`;
+	};
 
 	const handleInstagramClick = (event) => {
 		if (
@@ -43,39 +67,85 @@ const Contact = () => {
 	return (
 		<Layout>
 			<main className="contact-page">
-				<p className="contact-intro">
-					For enquiries on available works and collaborations,
-					please reach out via email or Instagram.
-				</p>
-
-				<div className="contact-columns">
-					<form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-						<input type="text" name="name" placeholder="Name" required />
-						<input type="email" name="email" placeholder="Subject" />
-						<textarea name="message" rows="5" placeholder="Message" required />
-						<button type="submit">Send</button>
-					</form>
+				<section className="contact-information">
+					<p className="contact-kicker">Contact</p>
+					<p className="contact-intro">
+						For enquiries about available works, exhibitions, commissions,
+						or collaborations, please get in touch.
+					</p>
 
 					<div className="contact-details">
-						<p>
-							<Mail size={16} style={{ marginRight: "0.5rem" }} />
-							<a href="mailto:lucylaurascott@gmail.com">
-								lucylaurascott@gmail.com
-							</a>
-						</p>
-						<p>
-							<Instagram size={16} style={{ marginRight: "0.5rem" }} />
-							<a
-								href={instagramWebUrl}
-								target="_blank"
-								rel="noreferrer"
-								onClick={handleInstagramClick}
-							>
+						<a href={`mailto:${emailAddress}`}>
+							<span className="contact-icon">
+								<Mail size={17} aria-hidden="true" />
+							</span>
+							<span>
+								<small>Email</small>
+								{emailAddress}
+							</span>
+						</a>
+						<a
+							href={instagramWebUrl}
+							target="_blank"
+							rel="noreferrer"
+							onClick={handleInstagramClick}
+						>
+							<span className="contact-icon">
+								<Instagram size={17} aria-hidden="true" />
+							</span>
+							<span>
+								<small>Instagram</small>
 								@alottyscotty
-							</a>
-						</p>
+							</span>
+						</a>
 					</div>
-				</div>
+				</section>
+
+				<form className="contact-form" onSubmit={handleSubmit}>
+					<div className="contact-field-row">
+						<label>
+							<span>Name</span>
+							<input
+								type="text"
+								name="name"
+								autoComplete="name"
+								required
+							/>
+						</label>
+						<label>
+							<span>Email</span>
+							<input
+								type="email"
+								name="email"
+								autoComplete="email"
+								required
+							/>
+						</label>
+					</div>
+
+					<label>
+						<span>Subject</span>
+						<input
+							type="text"
+							name="subject"
+						/>
+					</label>
+
+					<label>
+						<span>Message</span>
+						<textarea
+							name="message"
+							rows="6"
+							placeholder="Tell me a little about your enquiry..."
+							required
+						/>
+					</label>
+
+					<button type="submit">
+						<span>Send email</span>
+						<ArrowUpRight size={17} aria-hidden="true" />
+					</button>
+				</form>
 			</main>
 		</Layout>
 	);

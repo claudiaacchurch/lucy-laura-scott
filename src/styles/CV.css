@@ -1,78 +1,178 @@
 .cv-page {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start;
-	min-height: calc(100vh - 120px);
-	width: 100vw;
+	width: min(100%, 920px);
+	min-height: calc(100vh - 220px);
+	margin: 0 auto;
+	padding: clamp(2rem, 5vw, 5rem) clamp(0.5rem, 3vw, 2rem);
 	box-sizing: border-box;
 	font-family: "Inter", sans-serif;
-	flex-wrap: wrap;
 }
 
-.cv-page div,
-.cv-page .wp-block-group {
+.cv-content {
 	width: 100%;
-	max-width: 700px;
-	padding: 0 1rem;
-	margin: 0 auto 2rem auto;
-	box-sizing: border-box;
 }
 
-.cv-page h2 {
-	font-size: var(--font-subtitle);
-	letter-spacing: 1px;
-	padding: 1.5rem;
-	padding-left: 1rem;
+.cv-section {
+	display: grid;
+	grid-template-columns: minmax(150px, 0.34fr) minmax(0, 1fr);
+	gap: clamp(2rem, 7vw, 6rem);
+	padding: 0 0 clamp(2.25rem, 5vw, 4rem);
+	margin-bottom: clamp(2.25rem, 5vw, 4rem);
+	border-bottom: 1px solid #d8d5d1;
+}
+
+.cv-section:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+	border-bottom: 0;
+}
+
+.cv-section h1 {
 	margin: 0;
+	font-size: var(--font-subtitle);
+	font-weight: 300;
+	line-height: 1.35;
+	letter-spacing: 0.025em;
+	opacity: 0;
+	transform: translateY(7px);
+	transition:
+		opacity 480ms ease,
+		transform 560ms cubic-bezier(0.2, 0.75, 0.25, 1);
 }
 
-.cv-page ul {
+.cv-section ul {
+	display: grid;
+	gap: 1rem;
+	margin: 0;
+	padding: 0;
 	list-style: none;
-	padding-left: 0;
-	max-width: 700px;
-    padding: 0 1rem;
-    margin: 0 auto 2rem auto;
-	border-bottom: 1px solid #ccc;
-    padding-bottom: 2rem;
 }
 
-
-.cv-page ul:last-of-type {
-    border-bottom: 0px;
-    padding-bottom: 0;
-}
-
-.cv-page ul li {
+.cv-section li {
+	display: grid;
+	grid-template-columns: 5.4rem minmax(0, 1fr);
 	align-items: baseline;
-	max-width: 90%;
-	box-sizing: border-box;
-	line-height: 1.5;
-    margin-bottom: 1em;
+	gap: 1rem;
+	font-size: var(--font-small);
+	font-weight: 200;
+	line-height: 1.55;
+	opacity: 0;
+	transform: translateY(7px);
+	transition:
+		opacity 480ms ease,
+		transform 560ms cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.cv-page.is-ready .cv-section h1,
+.cv-page.is-ready .cv-section li {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .cv-date {
-	font-style: italic;
+	color: #77716d;
+	font-size: 0.82rem;
+	font-style: normal;
+	font-variant-numeric: tabular-nums;
+	letter-spacing: 0.025em;
+	white-space: nowrap;
+}
+
+.cv-entry {
+	min-width: 0;
+}
+
+.cv-entry a {
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+}
+
+.cv-skeleton {
+	display: grid;
+	gap: clamp(2.25rem, 5vw, 4rem);
+}
+
+.cv-skeleton-section {
+	display: grid;
+	grid-template-columns: minmax(150px, 0.34fr) minmax(0, 1fr);
+	gap: clamp(2rem, 7vw, 6rem);
+	padding-bottom: clamp(2.25rem, 5vw, 4rem);
+	border-bottom: 1px solid #e1dedb;
+}
+
+.cv-skeleton-heading,
+.cv-skeleton-date,
+.cv-skeleton-line {
+	display: block;
+	border-radius: 999px;
+	background: linear-gradient(105deg, #e7e4e1 30%, #f4f2f0 45%, #e7e4e1 60%);
+	background-size: 220% 100%;
+	animation: cv-shimmer 1.4s ease-in-out infinite;
+}
+
+.cv-skeleton-heading {
+	width: 72%;
+	height: 0.9rem;
+}
+
+.cv-skeleton-section > div {
+	display: grid;
+}
+
+.cv-skeleton-entry {
+	grid-column: 2;
+	display: grid;
+	grid-template-columns: 5.4rem minmax(0, 1fr);
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.cv-skeleton-date,
+.cv-skeleton-line {
+	height: 0.7rem;
+}
+
+.cv-skeleton-date {
+	width: 70%;
+}
+
+.cv-skeleton-line {
+	width: 100%;
+}
+
+.cv-skeleton-entry:nth-child(3n) .cv-skeleton-line {
+	width: 82%;
+}
+
+.cv-error {
+	font-size: var(--font-small);
 	font-weight: 200;
-	font-size: 0.9rem;
-	margin-right: 0.4rem;
-	display: inline-block;
-	min-width: 3ch;
 }
 
-.cv-page section:not(:last-child),
-.cv-page .wp-block-group:not(:last-child) {
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 2rem;
-	margin-bottom: 2rem;
+@keyframes cv-shimmer {
+	to {
+		background-position-x: -220%;
+	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 680px) {
 	.cv-page {
-		padding-top: unset;
+		padding: 1.5rem 0.25rem 3rem;
 	}
 
-	.cv-page ul {
-		padding-left: 20px;
+	.cv-section,
+	.cv-skeleton-section {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 1.5rem;
+	}
+
+	.cv-section li,
+	.cv-skeleton-entry {
+		grid-template-columns: 4.6rem minmax(0, 1fr);
+		gap: 0.75rem;
+	}
+
+	.cv-skeleton-entry {
+		grid-column: 1;
 	}
 }
